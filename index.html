@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="LAMMAH — An autonomous desert monitoring system combining ground sensors, Edge AI, solar-powered stations and event-triggered Hybrid VTOL response.">
+
+  <title>LAMMAH | Smart Desert Monitoring System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       INTRO SCREEN
+  ====================================================== -->
+
+  <div id="introScreen" class="intro-screen">
+
+    <div class="intro-glow"></div>
+
+    <div class="intro-content">
+
+      <div class="intro-symbol">
+        ◉
+      </div>
+
+      <h1>LAMMAH</h1>
+
+      <p class="intro-arabic">لمّاح</p>
+
+      <div class="intro-line"></div>
+
+      <p class="intro-tagline">
+        An eye on the ground.<br>
+        A falcon in the sky.
+      </p>
+
+      <button class="intro-button" onclick="enterSite()">
+        Explore LAMMAH
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MAIN WEBSITE
+  ====================================================== -->
+
+  <div id="mainSite" class="site-hidden">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+      <div class="nav-inner">
+
+        <a href="#" class="logo" onclick="showPage('overview'); return false;">
+
+          <div class="logo-mark">
+            ◉
+          </div>
+
+          <div>
+            <strong>LAMMAH</strong>
+            <small>لمّاح</small>
+          </div>
+
+        </a>
+
+
+        <nav id="mainNav">
+
+          <a href="#" data-page="overview">Overview</a>
+
+          <a href="#" data-page="sensors">Ground Sensors</a>
+
+          <a href="#" data-page="station">Solar Station</a>
+
+          <a href="#" data-page="drone">Aerial Response</a>
+
+          <a href="#" data-page="ai">Edge AI</a>
+
+          <a href="#" data-page="analytics">Analytics</a>
+
+          <a href="#" data-page="alerts">Alerts</a>
+
+          <a href="#" data-page="journey">Data Journey</a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+          <button id="languageBtn" class="language-button">
+            العربية
+          </button>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         PAGE CONTAINER
+    ====================================================== -->
+
+    <main id="pageContainer">
+
+
+      <!-- ===================================================
+           OVERVIEW
+      ==================================================== -->
+
+      <section class="page active-page" id="page-overview">
+
+        <div class="container">
+
+          <div class="hero">
+
+            <div class="hero-content">
+
+              <span class="badge">
+                <i></i>
+                AUTONOMOUS DESERT MONITORING
+              </span>
+
+              <h1>
+                An eye on the
+                <span>ground.</span>
+                <br>
+                A falcon in the
+                <span>sky.</span>
+              </h1>
+
+              <p>
+                LAMMAH replaces continuous drone patrols with an intelligent
+                ground-first monitoring network. Solar-powered stations sense
+                the environment, Edge AI analyzes events locally, and a
+                Hybrid VTOL drone responds only when aerial verification is
+                actually needed.
+              </p>
+
+              <div class="hero-actions">
+
+                <button class="primary" onclick="showPage('sensors')">
+                  Explore the System →
+                </button>
+
+                <button class="secondary" onclick="showPage('journey')">
+                  How LAMMAH Works
+                </button>
+
+              </div>
+
+              <p class="hero-note">
+                System-level innovation • Conceptual prototype
+              </p>
+
+            </div>
+
+
+            <div class="visual">
+
+              <div class="radar">
+
+                <div class="radar-line"></div>
+
+                <div class="radar-center"></div>
+
+                <span class="dot d1"></span>
+                <span class="dot d2"></span>
+                <span class="dot d3"></span>
+
+              </div>
+
+              <div class="status">
+                <strong>● SYSTEM READY</strong>
+                Ground monitoring active
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="overview-grid">
+
+            <article class="card">
+
+              <div class="icon">01</div>
+
+              <h3>Ground First</h3>
+
+              <p>
+                Multi-sensor ground units continuously monitor movement,
+                vibration, sound and environmental conditions.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">02</div>
+
+              <h3>Edge Intelligence</h3>
+
+              <p>
+                Data is analyzed locally to distinguish expected activity
+                such as wind and animals from unusual events.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">03</div>
+
+              <h3>Event Triggered</h3>
+
+              <p>
+                The aerial layer is activated only when the ground system
+                identifies an event that requires verification.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">04</div>
+
+              <h3>Solar Independent</h3>
+
+              <p>
+                Each remote station is designed around solar generation,
+                energy storage and intelligent power management.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           GROUND SENSORS
+      ==================================================== -->
+
+      <section class="page" id="page-sensors">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">GROUND SENSING</span>
+
+            <h2>
+              The ground becomes the first line of detection.
+            </h2>
+
+            <p>
+              LAMMAH uses compact semi-subterranean sensing units designed
+              for continuous operation in harsh desert environments.
+            </p>
+
+          </div>
+
+
+          <div class="feature-layout">
+
+
+            <div class="image-card">
+
+              <img
+                src="https://drop.hammel.in/ios/download/7cb75daf-f8d9-4362-8878-d35bcf1f6092.png"
+                alt="LAMMAH ground sensor">
+
+              <div class="image-label">
+                LAMMAH GROUND SENSOR
+              </div>
+
+            </div>
+
+
+            <div class="card large-card">
+
+              <span class="mini-label">
+                MULTI-SENSOR SUITE
+              </span>
+
+              <h3>
+                One station. Multiple signals.
+              </h3>
+
+              <p>
+                Instead of relying on a single sensing method, LAMMAH combines
+                multiple environmental signals to understand what is happening
+                around the station.
+              </p>
+
+
+              <div class="feature-list">
+
+
+                <div class="feature">
+
+                  <strong>01</strong>
+
+                  <div>
+                    <b>Seismic sensing</b>
+                    <span>
+                      Detects ground vibration and movement patterns.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>02</strong>
+
+                  <div>
+                    <b>Acoustic sensing</b>
+                    <span>
+                      Captures sound patterns such as engine activity.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>03</strong>
+
+                  <div>
+                    <b>Environmental sensing</b>
+                    <span>
+                      Helps the system understand changing desert conditions.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>04</strong>
+
+                  <div>
+                    <b>Local processing</b>
+                    <span>
+                      Edge AI analyzes the signals directly at the station.
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="three-cards">
+
+
+            <article class="card">
+
+              <div class="icon">01</div>
+
+              <h3>Semi-Subterranean Design</h3>
+
+              <p>
+                A low-profile structure can improve stability against strong
+                winds while helping protect internal electronics from harsh
+                surface conditions.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">02</div>
+
+              <h3>Thermal Protection</h3>
+
+              <p>
+                Partially embedding the unit uses the surrounding ground as
+                part of the thermal environment and reduces direct exposure.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">03</div>
+
+              <h3>Mesh Connectivity</h3>
+
+              <p>
+                Stations can form a network that allows information to move
+                through neighboring nodes toward an available communication
+                link.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           SOLAR STATION
+      ==================================================== -->
+
+      <section class="page" id="page-station">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">REMOTE ENERGY INFRASTRUCTURE</span>
+
+            <h2>
+              Solar power built for remote operation.
+            </h2>
+
+            <p>
+              LAMMAH stations are designed to generate, store and intelligently
+              manage their own energy while supporting drone readiness.
+            </p>
+
+          </div>
+
+
+          <div class="feature-layout">
+
+
+            <div class="image-card">
+
+              <img
+                src="https://drop.hammel.in/ios/download/f3b1c567-05f8-40dd-8bba-08673f04ea41.jpg"
+                alt="LAMMAH solar charging station">
+
+              <div class="image-label">
+                SOLAR POWERED LAMMAH STATION
+              </div>
+
+            </div>
+
+
+            <div class="card large-card">
+
+              <span class="mini-label">
+                AUTONOMOUS ENERGY
+              </span>
+
+              <h3>
+                Energy independence in the desert.
+              </h3>
+
+              <p>
+                Every station combines solar generation, charge regulation,
+                battery storage and intelligent power management to support
+                continuous sensing and drone charging in remote areas.
+              </p>
+
+
+              <div class="feature-list">
+
+
+                <div class="feature">
+
+                  <strong>01</strong>
+
+                  <div>
+                    <b>Solar generation</b>
+                    <span>
+                      Converts sunlight into electrical energy.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>02</strong>
+
+                  <div>
+                    <b>Energy storage</b>
+                    <span>
+                      Stores energy for night-time and low-sun conditions.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>03</strong>
+
+                  <div>
+                    <b>Smart power modes</b>
+                    <span>
+                      Normal, monitoring, alert and energy-saving modes.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>04</strong>
+
+                  <div>
+                    <b>Drone charging</b>
+                    <span>
+                      Recharges the aerial unit after a verification mission.
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="solar-cleaning">
+
+            <div>
+
+              <span class="mini-label">
+                WATERLESS SOLAR MAINTENANCE
+              </span>
+
+              <h3>
+                Cleaning the panel without consuming water.
+              </h3>
+
+              <p>
+                The station can monitor solar-panel performance continuously.
+                When efficiency drops because of dust accumulation, the system
+                can trigger a dry cleaning mechanism and then measure the
+                performance again to verify the result.
+              </p>
+
+            </div>
+
+
+            <div class="cleaning-steps">
+
+              <div>
+                <strong>01</strong>
+                Measure panel efficiency
+              </div>
+
+              <div>
+                <strong>02</strong>
+                Detect dust-related loss
+              </div>
+
+              <div>
+                <strong>03</strong>
+                Activate dry cleaning
+              </div>
+
+              <div>
+                <strong>04</strong>
+                Verify recovery
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="disclaimer">
+            Conceptual engineering design. Cleaning mechanism and performance
+            values require physical validation.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DRONE
+      ==================================================== -->
+
+      <section class="page" id="page-drone">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">EVENT-TRIGGERED AERIAL RESPONSE</span>
+
+            <h2>
+              The drone flies only when the ground says: verify.
+            </h2>
+
+            <p>
+              The Hybrid VTOL aircraft is not the first layer of surveillance.
+              It is the mobile verification layer activated after an unusual
+              event has been identified.
+            </p>
+
+          </div>
+
+
+          <div class="feature-layout">
+
+
+            <div class="image-card drone-image-card">
+
+              <img
+                src="https://drop.hammel.in/ios/download/cd7b7e27-9104-4d14-89df-de382b47cb12.png"
+                alt="LAMMAH Hybrid VTOL drone">
+
+              <div class="image-label">
+                LAMMAH HYBRID VTOL
+              </div>
+
+            </div>
+
+
+            <div class="card large-card">
+
+              <span class="mini-label">
+                LAMMAH VTOL
+              </span>
+
+              <h3>
+                Rapid aerial verification.
+              </h3>
+
+              <p>
+                When ground sensors and Edge AI identify an event that needs
+                additional verification, LAMMAH can dispatch a Hybrid VTOL
+                aircraft to inspect the area and return relevant information
+                to the operations center.
+              </p>
+
+
+              <div class="feature-list">
+
+
+                <div class="feature">
+
+                  <strong>01</strong>
+
+                  <div>
+                    <b>Vertical takeoff</b>
+                    <span>
+                      Designed to operate from a compact ground station.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>02</strong>
+
+                  <div>
+                    <b>Hybrid flight</b>
+                    <span>
+                      Combines vertical launch with efficient forward flight.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>03</strong>
+
+                  <div>
+                    <b>Solar-assisted design</b>
+                    <span>
+                      Lightweight solar cells can support daytime endurance.
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                  <strong>04</strong>
+
+                  <div>
+                    <b>Return & recharge</b>
+                    <span>
+                      After verification, the aircraft can return to its
+                      protected station.
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="fleet-status">
+
+
+            <div class="fleet-item">
+
+              <span class="fleet-number">
+                UAV-01
+              </span>
+
+              <span class="fleet-state ready">
+                READY
+              </span>
+
+            </div>
+
+
+            <div class="fleet-item">
+
+              <span class="fleet-number">
+                UAV-02
+              </span>
+
+              <span class="fleet-state ready">
+                VERIFICATION READY
+              </span>
+
+            </div>
+
+
+            <div class="fleet-item">
+
+              <span class="fleet-number">
+                UAV-03
+              </span>
+
+              <span class="fleet-state">
+                RETURNING
+              </span>
+
+            </div>
+
+
+            <div class="fleet-item">
+
+              <span class="fleet-number">
+                UAV-04
+              </span>
+
+              <span class="fleet-state">
+                SYSTEM CHECK
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           EDGE AI
+      ==================================================== -->
+
+      <section class="page" id="page-ai">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">EDGE ARTIFICIAL INTELLIGENCE</span>
+
+            <h2>
+              From raw signals to an informed decision.
+            </h2>
+
+            <p>
+              Instead of sending every sensor signal to a remote server,
+              LAMMAH processes important information locally at the station.
+            </p>
+
+          </div>
+
+
+          <div class="ai-dashboard">
+
+
+            <div class="ai-header">
+
+              <div>
+
+                <span class="mini-label">
+                  LAMMAH AI ENGINE
+                </span>
+
+                <h3>
+                  Event classification
+                </h3>
+
+              </div>
+
+              <span class="live-pill">
+                ● ANALYSIS ACTIVE
+              </span>
+
+            </div>
+
+
+            <div class="ai-grid">
+
+
+              <div class="ai-card">
+
+                <span>01</span>
+
+                <strong>
+                  Signal received
+                </strong>
+
+                <p>
+                  Movement, vibration and acoustic information are collected
+                  by the ground station.
+                </p>
+
+              </div>
+
+
+              <div class="ai-card">
+
+                <span>02</span>
+
+                <strong>
+                  Pattern analysis
+                </strong>
+
+                <p>
+                  The system compares the signal with expected environmental
+                  patterns.
+                </p>
+
+              </div>
+
+
+              <div class="ai-card">
+
+                <span>03</span>
+
+                <strong>
+                  Event classification
+                </strong>
+
+                <p>
+                  Unusual combinations of signals can raise the event priority.
+                </p>
+
+              </div>
+
+
+              <div class="ai-card">
+
+                <span>04</span>
+
+                <strong>
+                  Response decision
+                </strong>
+
+                <p>
+                  Only events requiring additional verification are escalated
+                  toward the aerial layer.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="ai-example">
+
+              <div>
+                <span>
+                  Example event
+                </span>
+
+                <strong>
+                  Possible vehicle activity
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  Confidence
+                </span>
+
+                <strong>
+                  94%
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  Next action
+                </span>
+
+                <strong>
+                  Aerial verification
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <p class="disclaimer">
+            Example values shown above are simulated interface data and do not
+            represent measured system performance.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           ANALYTICS
+      ==================================================== -->
+
+      <section class="page" id="page-analytics">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">OPERATIONAL ANALYTICS</span>
+
+            <h2>
+              One operational picture.
+            </h2>
+
+            <p>
+              The dashboard brings sensor activity, event classification and
+              fleet readiness into one interface for the operations center.
+            </p>
+
+          </div>
+
+
+          <div class="analytics-grid">
+
+
+            <div class="panel">
+
+              <div class="panel-head">
+
+                <div>
+
+                  <span class="mini-label">
+                    SENSOR ACTIVITY
+                  </span>
+
+                  <h3>
+                    Activity timeline
+                  </h3>
+
+                </div>
+
+                <span class="live-pill">
+                  LIVE
+                </span>
+
+              </div>
+
+
+              <div class="bars">
+
+                <div class="bar" style="height:42%">
+                  <span>00</span>
+                </div>
+
+                <div class="bar" style="height:58%">
+                  <span>04</span>
+                </div>
+
+                <div class="bar" style="height:48%">
+                  <span>08</span>
+                </div>
+
+                <div class="bar" style="height:72%">
+                  <span>12</span>
+                </div>
+
+                <div class="bar" style="height:54%">
+                  <span>16</span>
+                </div>
+
+                <div class="bar" style="height:81%">
+                  <span>20</span>
+                </div>
+
+                <div class="bar" style="height:63%">
+                  <span>24</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="panel">
+
+              <div class="panel-head">
+
+                <div>
+
+                  <span class="mini-label">
+                    EVENT STATUS
+                  </span>
+
+                  <h3>
+                    Current events
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <div class="status-list">
+
+
+                <div class="status-row">
+
+                  <span class="status-icon ok">
+                    ✓
+                  </span>
+
+                  <div>
+                    <b>Expected activity</b>
+                    <small>
+                      Classified locally by Edge AI
+                    </small>
+                  </div>
+
+                  <strong>
+                    92%
+                  </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                  <span class="status-icon warning">
+                    !
+                  </span>
+
+                  <div>
+                    <b>Review required</b>
+                    <small>
+                      Unusual signal pattern
+                    </small>
+                  </div>
+
+                  <strong>
+                    06
+                  </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                  <span class="status-icon alert">
+                    ⚠
+                  </span>
+
+                  <div>
+                    <b>Active alert</b>
+                    <small>
+                      Waiting for verification
+                    </small>
+                  </div>
+
+                  <strong>
+                    04
+                  </strong>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="stats">
+
+
+            <div class="stat">
+
+              <strong>
+                24/7
+              </strong>
+
+              <span>
+                Ground monitoring concept
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                AI
+              </strong>
+
+              <span>
+                Local event classification
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                VTOL
+              </strong>
+
+              <span>
+                On-demand aerial verification
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                SOLAR
+              </strong>
+
+              <span>
+                Independent remote power
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <p class="disclaimer">
+            Interface metrics are illustrative prototype data.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           ALERTS
+      ==================================================== -->
+
+      <section class="page" id="page-alerts">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">OPERATIONS CENTER</span>
+
+            <h2>
+              Events that deserve attention.
+            </h2>
+
+            <p>
+              LAMMAH organizes alerts according to location, classification
+              and response status.
+            </p>
+
+          </div>
+
+
+          <div class="alerts-panel">
+
+
+            <div class="alert-item active">
+
+              <div class="alert-marker danger"></div>
+
+              <div class="alert-content">
+
+                <div class="alert-top">
+
+                  <span class="alert-tag danger-tag">
+                    HIGH PRIORITY
+                  </span>
+
+                  <time>
+                    03 min ago
+                  </time>
+
+                </div>
+
+                <h3>
+                  Unusual movement — Northern Sector
+                </h3>
+
+                <p>
+                  A movement pattern requires additional field verification.
+                </p>
+
+                <div class="alert-meta">
+
+                  <span>
+                    SENSOR S-17
+                  </span>
+
+                  <span>
+                    INTENSITY 78%
+                  </span>
+
+                  <span>
+                    UAV-02 READY
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="alert-item">
+
+              <div class="alert-marker normal"></div>
+
+              <div class="alert-content">
+
+                <div class="alert-top">
+
+                  <span class="alert-tag review-tag">
+                    REVIEW
+                  </span>
+
+                  <time>
+                    18 min ago
+                  </time>
+
+                </div>
+
+                <h3>
+                  Ground vibration — Eastern Sector
+                </h3>
+
+                <p>
+                  The signal is being compared with known environmental
+                  patterns.
+                </p>
+
+                <div class="alert-meta">
+
+                  <span>
+                    SENSOR S-42
+                  </span>
+
+                  <span>
+                    INTENSITY 31%
+                  </span>
+
+                  <span>
+                    AI ANALYSIS
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="alert-item">
+
+              <div class="alert-marker safe"></div>
+
+              <div class="alert-content">
+
+                <div class="alert-top">
+
+                  <span class="alert-tag resolved-tag">
+                    RESOLVED
+                  </span>
+
+                  <time>
+                    41 min ago
+                  </time>
+
+                </div>
+
+                <h3>
+                  Animal movement classified
+                </h3>
+
+                <p>
+                  The signal matched an expected animal movement pattern and
+                  was excluded from operational alerts.
+                </p>
+
+                <div class="alert-meta">
+
+                  <span>
+                    SENSOR S-01
+                  </span>
+
+                  <span>
+                    AI VERIFIED
+                  </span>
+
+                  <span>
+                    NORMAL
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DATA JOURNEY
+      ==================================================== -->
+
+      <section class="page" id="page-journey">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">
+              DATA JOURNEY
+            </span>
+
+            <h2>
+              From the desert to the decision.
+            </h2>
+
+            <p>
+              The entire LAMMAH concept is built around one simple principle:
+              let the ground detect first, let AI decide what matters, and
+              deploy the aircraft only when necessary.
+            </p>
+
+          </div>
+
+
+          <div class="journey">
+
+
+            <div class="journey-step">
+
+              <span>
+                01
+              </span>
+
+              <div>
+
+                <b>
+                  SENSE
+                </b>
+
+                <p>
+                  Ground sensors continuously collect environmental signals.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step">
+
+              <span>
+                02
+              </span>
+
+              <div>
+
+                <b>
+                  ANALYZE
+                </b>
+
+                <p>
+                  Edge AI processes the information directly at the station.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step">
+
+              <span>
+                03
+              </span>
+
+              <div>
+
+                <b>
+                  DECIDE
+                </b>
+
+                <p>
+                  The system identifies whether the event needs escalation.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step">
+
+              <span>
+                04
+              </span>
+
+              <div>
+
+                <b>
+                  VERIFY
+                </b>
+
+                <p>
+                  The Hybrid VTOL drone responds only when aerial verification
+                  is needed.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step">
+
+              <span>
+                05
+              </span>
+
+              <div>
+
+                <b>
+                  RETURN
+                </b>
+
+                <p>
+                  The aircraft returns to the protected station for recharge
+                  and the event is logged.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="core-principle">
+
+            <span class="mini-label">
+              THE CORE IDEA
+            </span>
+
+            <h3>
+              The ground watches.
+              AI understands.
+              The aircraft responds.
+            </h3>
+
+            <p>
+              This system-level integration is the core innovation of LAMMAH:
+              combining ground sensing, Edge AI, energy management, dust
+              management and event-triggered aerial response into one
+              autonomous architecture.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           SUSTAINABILITY
+      ==================================================== -->
+
+      <section class="page" id="page-sustainability">
+
+        <div class="container">
+
+          <div class="section-head">
+
+            <span class="kicker">
+              SUSTAINABILITY
+            </span>
+
+            <h2>
+              Designed around the desert, not against it.
+            </h2>
+
+            <p>
+              LAMMAH aims to reduce unnecessary energy use, water consumption
+              and repeated field intervention through an integrated design.
+            </p>
+
+          </div>
+
+
+          <div class="sustainability-grid">
+
+
+            <article class="card">
+
+              <div class="icon">
+                ☀
+              </div>
+
+              <h3>
+                Solar Energy
+              </h3>
+
+              <p>
+                Remote stations are designed around solar generation and
+                energy storage.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">
+                ≋
+              </div>
+
+              <h3>
+                Waterless Cleaning
+              </h3>
+
+              <p>
+                The solar-panel maintenance concept avoids dependence on water
+                for routine dust removal.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">
+                ✦
+              </div>
+
+              <h3>
+                Fewer Flight Hours
+              </h3>
+
+              <p>
+                The aircraft is deployed for verification instead of
+                continuous patrol.
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="icon">
+                AI
+              </div>
+
+              <h3>
+                Predictive Maintenance
+              </h3>
+
+              <p>
+                Monitoring station health can help identify maintenance needs
+                before unnecessary field visits.
+              </p>
+
+            </article>
+
+
+          </div>
+
+
+          <div class="innovation-box">
+
+            <span class="mini-label">
+              SYSTEM-LEVEL INNOVATION
+            </span>
+
+            <h3>
+              The innovation is in the integration.
+            </h3>
+
+            <p>
+              LAMMAH does not depend on a single new component. Its innovation
+              comes from integrating ground sensing, Edge AI, solar energy,
+              intelligent power management, dust management and event-triggered
+              Hybrid VTOL response into one autonomous system.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+      <div class="footer-inner">
+
+        <div>
+
+          <strong>LAMMAH</strong>
+
+          <p>
+            An eye on the ground. A falcon in the sky.
+          </p>
+
+        </div>
+
+        <div class="footer-tag">
+          Conceptual Prototype • LAMMAH v2.0
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
